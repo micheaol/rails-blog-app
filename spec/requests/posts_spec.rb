@@ -21,7 +21,7 @@ RSpec.describe 'Posts', type: :request do
 
   describe 'GET #show' do
     before(:each) do
-      get user_post_path(655, 2)
+      get user_post_path(655, 6)
     end
 
     it 'should have the correct response status' do
