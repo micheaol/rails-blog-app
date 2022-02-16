@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 # frozen_string_literal: true
+=======
+ENV['RAILS_ENV'] ||= 'test'
+require_relative '../config/environment'
+require 'rails/test_help'
+>>>>>>> 6f4580813b6bf198cef1915b7f680f7612510cbe
 
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
