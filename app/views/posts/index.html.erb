@@ -23,9 +23,7 @@
     </div>
   </div>
   <div class = 'comments'>
-    <% post.recent_comments.each do |comment| %>
-      <p><%= comment.user.name %>: <%= comment.text %></p> 
-    <% end %>
+    <%= post.most_recent_comment%>
   </div>
 <% end %>
 
