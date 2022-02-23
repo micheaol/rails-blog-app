@@ -1,1 +1,32 @@
-<h1>All post Controller</h1>
+<section class = 'user-section'>
+  <div class  = 'user-image'>
+      <img src= #{user.photo}></img>
+  </div>
+  <div class = 'user-content'>
+    <div>
+      <h2><%= @user.name %></h2>
+    </div>
+    <div>
+      <p class = 'post-num'>Number of posts: <%= @user.post_counter%></p>
+    </div>
+  </div>
+</section>
+
+<% @posts.each do |post|%>
+  <div class = 'user-posts'>
+    <div>
+      <h3>Post <%= post.id %></h3>
+    </div>
+    <div>
+      <p><%= post.text %></p>
+      <p> Comments: <%=post.comments_counter %>, Likes: <%= post.likes_counter%></p>
+    </div>
+  </div>
+  <div class = 'comments'>
+    <%= post.most_recent_comment%>
+  </div>
+<% end %>
+
+<div class = 'pagination'>
+  <button type="submit" >Pagination</button>
+</div>
