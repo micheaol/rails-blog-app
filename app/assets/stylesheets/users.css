@@ -7,9 +7,9 @@
     padding: 10px;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-  }
-  
-  .user-image {
+}
+
+.user-image {
     display: -webkit-box;
     display: flex;
     -webkit-box-align: center;
@@ -21,9 +21,9 @@
     width: 70px;
     height: 60px;
     border: 2px solid #000;
-  }
-  
-  .user-content {
+}
+
+.user-content {
     display: -webkit-box;
     display: flex;
     -webkit-box-align: center;
@@ -38,21 +38,21 @@
     margin-left: 15px;
     padding-left: 20px;
     border: 2px solid #000;
-  }
-  
-  .user-name {
+}
+
+.user-name {
     text-decoration: none;
     color: #000;
     font-size: 30px;
-  }
-  
-  .post-num {
+}
+
+.post-num {
     font-size: 15px;
     margin-bottom: 3px;
     font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .user-bio {
+}
+
+.user-bio {
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
@@ -63,5 +63,5 @@
     padding: 10px;
     margin-left: 80px;
     border: 2px solid black;
-  }
+}
   /*# sourceMappingURL=users.css.map */
