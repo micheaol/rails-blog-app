@@ -3,9 +3,11 @@ class CommentsController < ApplicationController
         post = Post.find(params[:id])
         new_comment = Comment.create(user_id: current_user.id, post_id: post.id, text: comment_params[:text])
         if new_comment.save
-          redirect_to user_post_path(post.user.id, post.id), notice: 'Comment created!'
+            flash[:notice] = "Comment added successfully"
+          redirect_to user_post_path(post.user.id, post.id)
         else
-          redirect_to user_post_path(post.user.id, post.id), alert: 'Failed to add comment!'
+            flash[:alert] = 'Failed to add comment!'
+          redirect_to user_post_path(post.user.id, post.id)
         end
       end
     
