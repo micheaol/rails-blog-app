@@ -4,7 +4,8 @@
     <p> Post liked! </p>
   <% else %>
     <%= form_with url: like_form_path(post.id) do |form| %>
-      <%= form.submit "Like" %>
+
+      <%= form.submit "Like" %> <span><%= flash[:notice]%></span>
     <% end %>
   <% end %>
 </div>
