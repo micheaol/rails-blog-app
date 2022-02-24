@@ -1,0 +1,12 @@
+<div>
+    <div>
+  <% if post.likes.exists?(user_id: @current_user) %>
+    <p> Post liked! </p>
+  <% else %>
+    <%= form_with url: like_form_path(post.id) do |form| %>
+
+      <%= form.submit "Like" %> <span><%= flash[:notice]%></span>
+    <% end %>
+  <% end %>
+</div>
+</div>

@@ -1,4 +1,11 @@
+<div>
+<%= link_to "Add new post", user_new_post_path %>
+</div>
+<div>
+    <%= flash[:notice]%>
+</div>
 <section class = 'user-section'>
+
   <div class  = 'user-image'>
       <img src= #{user.photo}></img>
   </div>
@@ -19,7 +26,7 @@
     </div>
     <div>
       <p><%= post.text %></p>
-      <p> Comments: <%=post.comments_counter %>, Likes: <%= post.likes_counter%></p>
+      <p> Comments: <%=post.comments.size %>, Likes: <%= post.likes.size%></p>
     </div>
   </div>
   <div class = 'comments'>
