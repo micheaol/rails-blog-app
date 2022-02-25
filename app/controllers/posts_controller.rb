@@ -22,6 +22,7 @@ class PostsController < ApplicationController
       flash[:notice] = 'Post created successfully!!!'
       redirect_to user_posts_path(@new_post.user.id)
     else
+      flash[:notice] = 'Opp! some went wrong!!'
       render :new
     end
   end
