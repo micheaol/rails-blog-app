@@ -1,27 +1,27 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-    subject { User.create!(name: 'Paulina', photo: 'MB', bio: 'bio', posts_counter: 3) }
+  subject { User.create!(name: 'Paulina', photo: 'MB', bio: 'bio', posts_counter: 3) }
 
-    it 'is valid with valid attributes' do
-        expect(subject).to be_valid
+  it 'is valid with valid attributes' do
+    expect(subject).to be_valid
+  end
+
+  it 'is not valid without a name' do
+    subject.name = nil
+    expect(subject).to_not be_valid
+  end
+
+  describe 'validations' do
+    it 'name should be present' do
+      subject.name = nil
+      expect(subject).to_not be_valid
     end
 
-    it 'is not valid without a name' do
-        subject.name = nil
-        expect(subject).to_not be_valid
-      end
-
-      describe 'validations' do
-        it 'name should be present' do
-          subject.name = nil
-          expect(subject).to_not be_valid
-        end
-
-        it 'posts_counter should be present' do
-            subject.posts_counter = nil
-            expect(subject).to_not be_valid
-          end
+    it 'posts_counter should be present' do
+      subject.posts_counter = nil
+      expect(subject).to_not be_valid
+    end
   end
 
   describe '#recent_posts' do
