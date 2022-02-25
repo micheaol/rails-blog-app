@@ -7,7 +7,8 @@ class LikesController < ApplicationController
       flash[:notice] = 'Liked'
       redirect_to user_posts_path(post.user.id, post.id)
     else
-      redirect_to user_posts_path(post.user.id, post.id), alert: 'Not liked!'
+      flash[:alert] ='Not liked!'
+      redirect_to user_posts_path(post.user.id, post.id)
     end
   end
 end
