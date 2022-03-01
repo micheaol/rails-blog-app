@@ -2,13 +2,11 @@
 <div class = 'align-body'>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field input-field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, placeholder: "User Email", autofocus: true, autocomplete: "email", class: "input-width" %>
   </div>
 
   <div class="field input-field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.password_field :password, placeholder: "Password", autocomplete: "current-password", class: "input-width" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
