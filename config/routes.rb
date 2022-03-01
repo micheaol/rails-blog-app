@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  devise_for :users
   root 'users#index'
 
   post 'users/:id/like/create', to: 'likes#create', as: 'like_form'

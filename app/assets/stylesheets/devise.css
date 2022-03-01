@@ -1,0 +1,21 @@
+.align-body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.align-body .field {
+  margin-top: 15px;
+}
+
+.input-width {
+  width: 350px;
+}
+
+.sign-in-button {
+  margin: 15px 0;
+  text-align: center;
+  width: 357px;
+}
