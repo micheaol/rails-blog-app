@@ -9,6 +9,7 @@
     </div>
   </div>
   <%= render partial: "/shared/like_form", locals: { post: @post } %>
+   <%= button_to 'Delete', method: "delete", class: "btn"%>
   <p><%= @post.text %></p>
 </div>
 
