@@ -9,6 +9,8 @@ gem 'ffi'
 gem 'rails', '~> 7.0.2', '>= 7.0.2.2'
 gem 'rails-controller-testing'
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'cancancan', '~> 1.9'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
