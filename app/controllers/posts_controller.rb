@@ -23,7 +23,7 @@ class PostsController < ApplicationController
     @current_user = User.find(params[:user_id])
     @new_post = Post.new(user: @current_user, title: params[:post][:title], text: params[:post][:text])
 
-    if @new_post.save
+    if @new_post.save!
       redirect_to user_posts_path(@new_post.user.id)
       flash[:notice] = 'Post created successfully!!!'
     else
