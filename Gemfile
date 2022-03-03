@@ -5,6 +5,7 @@ ruby '3.0.3'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'bullet', group: 'development'
 gem 'devise'
+gem 'devise-jwt'
 gem 'ffi'
 gem 'rails', '~> 7.0.2', '>= 7.0.2.2'
 gem 'rails-controller-testing'
