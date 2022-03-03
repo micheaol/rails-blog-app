@@ -85,7 +85,7 @@ Milestone 6:
 
 Open your termnial and run the following command:
 
-<code>git clone https://github.com/AlexRS90/blog-app.git</code>
+<code>git clone https://github.com/micheaol/rails-blog-app.git</code>
  - cd blog-app
  - bundle
  - rails db:create
