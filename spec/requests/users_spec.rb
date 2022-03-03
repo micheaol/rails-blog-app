@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
+  login_user
   describe 'GET #index' do
-    before(:each) do
+    before do
       get users_path
     end
 
@@ -13,15 +14,11 @@ RSpec.describe 'Users', type: :request do
     it 'displays the correct template' do
       expect(response).to render_template(:index)
     end
-
-    it 'has the correct placeholder text' do
-      expect(response.body).to include('All users posts')
-    end
   end
 
   describe 'GET #show' do
-    before(:each) do
-      get user_path(655)
+    before do
+      get user_path(@user.id)
     end
 
     it 'should have the correct response status' do
@@ -30,10 +27,6 @@ RSpec.describe 'Users', type: :request do
 
     it 'displays the correct template' do
       expect(response).to render_template(:show)
-    end
-
-    it 'displays the correct placeholder text' do
-      expect(response.body).to include('Show individual user')
     end
   end
 end
