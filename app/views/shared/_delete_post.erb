@@ -1,0 +1,8 @@
+<div>
+    <div>
+    <p> Post liked! </p>
+    <%= form_with  do |form| %>
+      <%= form.submit "Delete", method: "delete" %> <span><%= flash[:notice]%></span>
+  <% end %>
+</div>
+</div>
