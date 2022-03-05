@@ -10,7 +10,6 @@ gem 'ffi'
 gem 'rails', '~> 7.0.2', '>= 7.0.2.2'
 gem 'rails-controller-testing'
 gem 'rubocop', '>= 1.0', '< 2.0'
-gem 'rswag'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
@@ -59,6 +58,9 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails', '~> 5.0.0'
 end
+
+
+gem 'rswag'
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
